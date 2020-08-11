@@ -24,7 +24,7 @@ node {
         /* 
 			You would need to have creds of ECR before you can push images to your account
 		*/
-  docker.withRegistry('332267807927.dkr.ecr.us-west-2.amazonaws.com/dev8-graphql, 'ecr:us-west-2:demo-ecr-credentials') {
+  docker.withRegistry('332267807927.dkr.ecr.us-west-2.amazonaws.com/dev8-graphql, 'demo-ecr-credentials') {
 	  app.push("${env.BUILD_NUMBER}")
           app.push("latest")
 	}
